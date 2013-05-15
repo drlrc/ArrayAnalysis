@@ -1,0 +1,49 @@
+#=============================================================================#
+# ArrayAnalysis - ArrayAnalysisPath                                           #
+# a tool for visualisation of expression set on a pathways                    #
+#                                                                             #
+# Copyright 2010-2011 BiGCaT Bioinformatics                                   #
+#                                                                             #
+# Licensed under the Apache License, Version 2.0 (the "License");             #
+# you may not use this file except in compliance with the License.            #
+# You may obtain a copy of the License at                                     #
+#                                                                             #
+# http://www.apache.org/licenses/LICENSE-2.0                                  #
+#                                                                             #
+# Unless required by applicable law or agreed to in writing, software         #
+# distributed under the License is distributed on an "AS IS" BASIS,           #
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    #
+# See the License for the specific language governing permissions and         #
+# limitations under the License.                                              #
+#=============================================================================#
+
+gexFile <- paste(inputFile,".pgex",sep="")
+
+## Load library
+library(methods)
+library(XMLRPC)
+print("Library are loaded")
+
+## Set working directory
+setwd (WORK.DIR)
+
+## Set address
+host <- "http://localhost:2501"
+
+##Make pgex
+print("Make pgex")
+pgex <- xml.rpc(host,"MakePgexHandler.createPgex", inputFile, gdbFile, species)
+print (pgex)	
+
+## Create Visualization
+print("Create visualisation")
+vis <- xml.rpc(host,"VisXmlHandler.createVisualization", gexFile, gColorSet, gColor, gValue, rColorSet, rColor, rExpr)
+print (vis)
+
+## Get results
+print("Export results")
+result <- xml.rpc(host,"StatExportHandler.xportInfo", gexFile, gdbFile, wpCol, exprZ, WORK.DIR, TRUE, refName, "http://ArrayAnalysis.org")
+print (result)
+print("End")
+
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/arrayanalysis/!svn/ver/234/trunk/src/StatModule
+END
+run_affyAnalysisStat.R
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/arrayanalysis/!svn/ver/119/trunk/src/StatModule/run_affyAnalysisStat.R
+END
+functions_Stat.R
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/arrayanalysis/!svn/ver/234/trunk/src/StatModule/functions_Stat.R
+END
+affyAnalysisStat.R
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/arrayanalysis/!svn/ver/114/trunk/src/StatModule/affyAnalysisStat.R
+END
