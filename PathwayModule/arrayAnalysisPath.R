@@ -1,5 +1,5 @@
 #=============================================================================#
-# ArrayAnalysis - ArrayAnalysisPath                                           #
+# ArrayAnalysis - ArrayAnalysisPath  test                                     #
 # a tool for visualisation of expression set on a pathways                    #
 #                                                                             #
 # Copyright 2010-2013 BiGCaT Bioinformatics                                   #
